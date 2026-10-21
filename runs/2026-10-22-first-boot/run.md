@@ -10,7 +10,8 @@
 ## Result
 
 Lock screen -> autoswipe -> desktop. Observed by the operator: 22 s to lock
-screen and 30 s to autoswipe (observation; not fixed timing).
+screen and 30 s to autoswipe, measured from the Apple logo (observation; not
+fixed timing).
 
 ## Evidence
 
