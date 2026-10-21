@@ -51,8 +51,9 @@ CI: Actions -> host-check -> Run workflow. The report is a text artifact.
 
 ## Related project
 
-`ruby-ios-bringup` holds the build recipe, success-bundle hashes and the
-reproduction documentation. This repository only holds probes and run cards.
+[ruby-ios-bringup](https://github.com/lky005/ruby-ios-bringup) holds the build
+recipe, success-bundle hashes and the reproduction documentation. This
+repository only holds probes and run cards.
 
 ## License
 

@@ -46,7 +46,8 @@ CI：Actions -> host-check -> Run workflow，报告是一个文本 artifact。
 
 ## 相关项目
 
-`ruby-ios-bringup` 保存构建配方、success bundle 哈希和复现文档；本仓库只放探针和 run card。
+[ruby-ios-bringup](https://github.com/lky005/ruby-ios-bringup) 保存构建配方、
+success bundle 哈希和复现文档；本仓库只放探针和 run card。
 
 ## 许可
 

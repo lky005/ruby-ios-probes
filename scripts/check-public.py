@@ -31,6 +31,11 @@ PII = [
     (re.compile(r"[\w.+-]+@[\w.-]+\.[A-Za-z]{2,}"), "email address"),
 ]
 
+PROJECT_URLS = {
+    "https://github.com/lky005/ruby-ios-bringup",
+    "https://github.com/lky005/ruby-ios-probes",
+}
+
 
 def tracked_files():
     out = subprocess.check_output(
@@ -56,6 +61,8 @@ def main():
             text = open(path, encoding="utf-8", errors="ignore").read()
         except OSError:
             continue
+        for url in PROJECT_URLS:
+            text = text.replace(url, "")
         for rx, label in PII:
             if rx.search(text):
                 bad.append(f"{label}: {rel}")
