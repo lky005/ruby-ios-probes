@@ -16,6 +16,12 @@ run cards.
 | `probes/device/probe-twrp.sh` | TWRP version, slot, partition sizes, ICL block state, SWEETLOG ring (read-only) |
 | `.github/workflows/host-check.yml` | runs the host probes on a GitHub-hosted Ubuntu runner and uploads a text report |
 
+## Records
+
+- [Hash stability](HASHES.md): fixed pre-boot vs volatile post-boot hashes.
+- [B+NOP first boot -> A'](runs/2026-10-22-first-boot/run.md)
+- [CI kernel test](runs/2026-10-22-ci-kernel/run.md)
+
 ## Quick start
 
 Host:

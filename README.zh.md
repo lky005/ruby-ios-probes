@@ -14,6 +14,12 @@
 | `probes/device/probe-twrp.sh` | TWRP 版本、slot、分区大小、ICL 块状态、SWEETLOG ring（只读） |
 | `.github/workflows/host-check.yml` | 在 GitHub-hosted Ubuntu runner 上跑 host 探针，输出文本报告 |
 
+## 记录
+
+- [hash 稳定性](HASHES.zh.md)：启动前固定 vs 启动后易变。
+- [B+NOP 首启 -> A'](runs/2026-10-22-first-boot/run.md)
+- [CI kernel 测试](runs/2026-10-22-ci-kernel/run.md)
+
 ## 快速开始
 
 主机：
