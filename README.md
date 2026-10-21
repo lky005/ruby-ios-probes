@@ -14,7 +14,7 @@ run cards.
 | `probes/host/check-env.sh` | disk, RAM, FUSE, loop, apfs-fuse, hfsprogs, python, adb/fastboot, clang/lld |
 | `probes/host/check-loop.sh` | can this host create and loop-mount a small HFS+ image? (synthetic, no Apple material) |
 | `probes/device/probe-twrp.sh` | TWRP version, slot, partition sizes, ICL block state, SWEETLOG ring (read-only) |
-| `ci/host-check.yml` | runs the host probes on a GitHub-hosted Ubuntu runner and uploads a text report |
+| `.github/workflows/host-check.yml` | runs the host probes on a GitHub-hosted Ubuntu runner and uploads a text report |
 
 ## Quick start
 

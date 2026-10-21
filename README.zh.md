@@ -12,7 +12,7 @@
 | `probes/host/check-env.sh` | 磁盘、内存、FUSE、loop、apfs-fuse、hfsprogs、python、adb/fastboot、clang/lld |
 | `probes/host/check-loop.sh` | 这台机器能不能创建并 loop 挂载一个小的 HFS+ 镜像（合成数据，不碰 Apple 内容） |
 | `probes/device/probe-twrp.sh` | TWRP 版本、slot、分区大小、ICL 块状态、SWEETLOG ring（只读） |
-| `ci/host-check.yml` | 在 GitHub-hosted Ubuntu runner 上跑 host 探针，输出文本报告 |
+| `.github/workflows/host-check.yml` | 在 GitHub-hosted Ubuntu runner 上跑 host 探针，输出文本报告 |
 
 ## 快速开始
 
