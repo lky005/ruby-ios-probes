@@ -1,0 +1,25 @@
+# Firmware, images, dumps and raw logs are never committed.
+*.img
+*.bin
+*.elf
+*.o
+*.a
+*.dtb
+*.dtbo
+*.dmg
+*.ipsw
+*.zip
+*.7z
+*.tar
+*.gz
+*.log
+logs/
+dumps/
+out/
+build/
+__pycache__/
+*.pyc
+
+# Generated reports are artifacts, not repository content.
+report.txt
+runs/**/raw/

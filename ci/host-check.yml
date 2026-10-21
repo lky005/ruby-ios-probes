@@ -1,0 +1,37 @@
+name: host-check
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+
+concurrency:
+  group: host-check-${{ github.ref }}
+  cancel-in-progress: true
+
+permissions:
+  contents: read
+
+jobs:
+  host:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
+      - name: Public hygiene
+        run: python3 scripts/check-public.py
+      - name: Install host tools
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y hfsprogs p7zip-full clang lld || true
+          sudo apt-get install -y apfs-fuse || true
+      - name: Environment report
+        run: bash probes/host/check-env.sh | tee report.txt
+      - name: Synthetic HFS+ loop check
+        run: sudo bash probes/host/check-loop.sh | tee -a report.txt || true
+      - name: Upload report
+        uses: actions/upload-artifact@v4
+        with:
+          name: host-report
+          path: report.txt
+          if-no-files-found: error
